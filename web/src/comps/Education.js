@@ -10,6 +10,7 @@ export default function Education() {
 
   return (
     <div className='card'>
+       <h1>Education</h1>
        <div className="edu1">
        <Educard></Educard>
       </div>
