@@ -1,39 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Navbar from './comps/Navbar';
-import Profile from './comps/Profile';
-import { useState , useEffect } from "react";
-import axios from "axios";
+import Profile_f from './comps/profile_f';
+import Education_f from './comps/Education_f';
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Skill from './comps/Skill';
+
 function App() {
-  const [profiles, setProfiles] = useState([])
-
-  useEffect(()=>{
-    async function getAllProfile(){
-      try {
-        const profiles = await axios.get('http://127.0.0.1:8000/api/profile/')
-        console.log(profiles.data)
-        setProfiles(profiles.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getAllProfile()
-  }, [])
-  
-  
   return (
-
-    <div className="App">
-     <Navbar></Navbar>
-     <Profile></Profile>
-     {
-       profiles.map((profile, i)=>{
-         return (
-           <h2>{profile.name} {profile.nickname}</h2>
-         )
-       })
-     }
-
+    <div className='App'>
+    <Router>
+      <Routes>
+        <Route path ='/' element={<Profile_f/>}/>
+        <Route path ='/edu' element={<Education_f/>}/>
+        <Route path ='/skill' element={<Skill/>}/>
+      </Routes>
+    </Router>
     </div>
   );
 }

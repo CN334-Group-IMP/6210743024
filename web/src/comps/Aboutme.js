@@ -2,12 +2,12 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { requirePropFactory } from '@mui/material';
-import './Profile.css'
+import './Aboutme.css'
 import { useState , useEffect } from "react";
 import axios from "axios";
-import Aboutme from './Aboutme';
 
-export default function Profile() {
+
+export default function Aboutme() {
     const [profiles, setProfiles] = useState([])
 
   useEffect(()=>{
@@ -25,18 +25,14 @@ export default function Profile() {
 
   return (
     <div className='container'>
-        <div className="Prof">
-            <div className="Header">
-                About me
-                <Aboutme></Aboutme>
-            </div>
-            
-            <Stack direction="row">
-                <img alt="Me" src={require("../pics/me.jpg")} className="Pic"/>  
-            </Stack>            
+            {
+            profiles.map((profile, i)=>{
+                return (
+            <div className='bout'>{profile.myinfo}</div>
+         )
+       })
+     }
         </div>
         
-        
-    </div>
   );
 }

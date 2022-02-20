@@ -1,0 +1,28 @@
+/* .container{
+    width: 500px;
+    height: 600px;
+    background-color: #FADA96;
+    margin-left: 37%;
+} */
+
+.hs{
+    width : 300px;
+    height: 150px;
+    background-color: white;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.card{
+    height : 500px;
+    background-color: #FADA96;
+    padding-left: 42%;
+}
+
+.edu2{
+    padding-top: 20px;
+}
+
+.edu1{
+    padding-top: 20px;
+}

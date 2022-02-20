@@ -1,14 +1,14 @@
 .Prof{
-    padding-left:10%;
-    margin-top: 100px;
     background-color: #F6C65F;
-    height: 450px;
+
+    
     
     
 }
 
 .Pic{
     padding-top: 25px;
+    margin-left: 100px;
     height: 400px;
     border-radius: 50%;
     
@@ -16,8 +16,9 @@
 
 .Header{
     float:right;
-    font-size: 50px;
-    padding-right: 830px;
+    padding-top: 30px;
+    font-size: 70px;
+    padding-right: 200px;
     font-family: monospace;
     color: white;
 }
